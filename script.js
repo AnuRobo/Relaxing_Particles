@@ -28,8 +28,8 @@ canvas.addEventListener('click', (event)=>{
 })
 
 canvas.addEventListener('touchmove', (event)=>{
-    mouse.x = event.x;
-    mouse.y = event.y;
+    mouse.x = event.touches[0].clientX;
+    mouse.y = event.touches[0].clientY;
     // drawCircle();
     for (let i = 0; i < 5 ;i++){
         particlesArray.push(new Particle());
